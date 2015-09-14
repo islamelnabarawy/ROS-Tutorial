@@ -1,6 +1,4 @@
 
-#include <strstream>
-
 #include "turtle_control.h"
 
 TurtleControl::TurtleControl(std::string turtle_twist_topic, std::string turtle_pose_topic)
@@ -11,14 +9,13 @@ TurtleControl::TurtleControl(std::string turtle_twist_topic, std::string turtle_
 
 void TurtleControl::poseCallback(const turtlesim::Pose::ConstPtr& message)
 {
-    std::stringstream log;
-    log << message->x << ", " << message->y;
-
-    ROS_INFO(log.str().c_str());
+	turtle_pose = *message;
 }
 
 void TurtleControl::update()
 {
+    ROS_INFO_STREAM(turtle_pose.x << ", " << turtle_pose.y);
+
     geometry_msgs::Twist msg;
     msg.angular.z = 1.0f;
     msg.linear.x = 1.0f;

@@ -18,6 +18,8 @@ private:
     ros::Subscriber pose_sub;
     ros::NodeHandle node;
 
+    turtlesim::Pose turtle_pose;
+
     void poseCallback(const turtlesim::Pose::ConstPtr& message);
 };
 

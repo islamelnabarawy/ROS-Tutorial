@@ -8,7 +8,7 @@ int main(int argc, char** argv)
 
     TurtleControl control("/turtle1/cmd_vel", "/turtle1/pose");
 
-    ros::Rate loop_rate(2);
+    ros::Rate loop_rate(1);
 
     while (ros::ok())
     {
