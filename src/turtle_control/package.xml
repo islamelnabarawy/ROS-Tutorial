@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package>
+  <name>turtle_control</name>
+  <version>0.0.0</version>
+  <description>The turtle_control package</description>
+
+  <maintainer email="ie3md@mst.edu">Islam Elnabarawy</maintainer>
+
+  <license>BSD</license>
+
+  <author email="ie3md@mst.edu">Islam Elnabarawy</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>turtlesim</build_depend>
+
+  <run_depend>roscpp</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>turtlesim</run_depend>
+
+</package>
